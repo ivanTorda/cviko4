@@ -86,7 +86,7 @@ int main(void) {
 			Delay(100);
 			STM_EVAL_LEDToggle(LED2);
 
-		} else if (AD_value >= 1000 && AD_value <= 2000) {
+		} else if (AD_value > 1000 && AD_value <= 2000) {
 			Delay(200);
 			STM_EVAL_LEDToggle(LED2);
 
