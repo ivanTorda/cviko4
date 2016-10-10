@@ -78,6 +78,24 @@ int main(void) {
 		}
 		AD_value = ADC_GetConversionValue(ADC1);
 
+		if (AD_value < 100) {
+			Delay(50);
+			STM_EVAL_LEDToggle(LED2);
+
+		} else if (AD_value >= 100 && AD_value <= 1000) {
+			Delay(100);
+			STM_EVAL_LEDToggle(LED2);
+
+		} else if (AD_value >= 1000 && AD_value <= 2000) {
+			Delay(200);
+			STM_EVAL_LEDToggle(LED2);
+
+		} else if (AD_value > 2000) {
+			Delay(250);
+			STM_EVAL_LEDToggle(LED2);
+
+		}
+
 	}
 }
 
